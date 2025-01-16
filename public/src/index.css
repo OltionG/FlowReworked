@@ -1,54 +1,66 @@
+/* Imports the Poppins font from Google Fonts with specific weights */
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap");
 
+/* Resets margin and padding for all elements and ensures consistent box sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Sets the default font for the body, buttons, and inputs */
 body, button, input {
-  font-family: "Poppins";
+  font-family: "Poppins"; /* Uses the imported Poppins font */
 }
 
+/* Ensures the body does not exceed viewport dimensions and disables scrolling */
 body {
-  max-height: 100vh;
-  max-width: 100vw;
-  overflow: hidden;
-}.App {
-  text-align: center;
+  max-height: 100vh; /* Restricts height to viewport height */
+  max-width: 100vw; /* Restricts width to viewport width */
+  overflow: hidden; /* Prevents scrolling */
 }
 
+/* Styles the main application container */
+.App {
+  text-align: center; /* Centers text and inline elements */
+}
+
+/* Styles the app logo */
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 40vmin; /* Sets the logo height relative to the viewport */
+  pointer-events: none; /* Disables pointer events */
 }
 
+/* Adds an animation to the app logo when reduced motion is not preferred */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear; /* Rotates the logo continuously */
   }
 }
 
+/* Styles the application header */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #282c34; /* Dark background color */
+  min-height: 100vh; /* Ensures the header spans the full viewport height */
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Stacks child elements vertically */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  font-size: calc(10px + 2vmin); /* Responsive font size based on viewport */
+  color: white; /* Sets text color to white */
 }
 
+/* Styles links within the application */
 .App-link {
-  color: #61dafb;
+  color: #61dafb; /* Light blue color for links */
 }
 
+/* Keyframe animation for spinning the app logo */
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Starts with no rotation */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Completes a full rotation */
   }
 }

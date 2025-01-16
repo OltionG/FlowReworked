@@ -1,13 +1,14 @@
-import React from "react"; 
-import "./main.css"
+import React from "react";
+import "./main.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+// Importing all page and component files
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Chat from "./pages/Chat";
 import Home from "./pages/Home";
 import { About } from "./pages/About";
 import SetAvatar from "./components/SetAvatar";
-import { Contacts } from "./pages/Contacts"
+import { Contacts } from "./pages/Contacts";
 import Dashboard from "./components/Dashboard";
 import News from "./components/news/News";
 import CreateNews from "./components/news/CreateNews";
@@ -18,20 +19,24 @@ import CreateCategory from "./components/categories/CreateCategory";
 import EditCategory from "./components/categories/EditCategory";
 import DeleteCategory from "./components/categories/DeleteCategory";
 import Sculptor from "./components/sculptor/Sculptor";
-import CreateSculptor from "./components/sculptor/CreateSculptor"
-import EditAuthor from "./components/sculptor/EditSculptor"
+import CreateSculptor from "./components/sculptor/CreateSculptor";
+import EditAuthor from "./components/sculptor/EditSculptor";
 import Sculpture from "./components/sculpture/Sculpture";
-import CreateSculpture from "./components/sculpture/CreateSculpture"
-import DeleteSculpture from "./components/sculpture/DeleteSculpture"
+import CreateSculpture from "./components/sculpture/CreateSculpture";
+import DeleteSculpture from "./components/sculpture/DeleteSculpture";
 import Video from "./pages/Video";
 import Room from "./pages/Room";
 import NewsForum from "./pages/News";
 
+// Main application component
 export default function App() {
   return (
     <BrowserRouter>
+      {/* Define application routes */}
       <Routes>
-        <Route exact path="/" element = {<Navigate to="/home" />}/> 
+        {/* Redirect "/" to "/home" */}
+        <Route exact path="/" element={<Navigate to="/home" />} />
+        {/* Define routes for each page/component */}
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/setAvatar" element={<SetAvatar />} />
@@ -55,8 +60,8 @@ export default function App() {
         <Route path="/createSculpture" element={<CreateSculpture />} />
         <Route path="/deleteSculpture/:id" element={<DeleteSculpture />} />
         <Route path="/video" element={<Video />} />
-        <Route path="/room/:roomId" element={<Room/>}/>
-        <Route path="/forum" element={<NewsForum/>}/> 
+        <Route path="/room/:roomId" element={<Room />} />
+        <Route path="/forum" element={<NewsForum />} />
       </Routes>
     </BrowserRouter>
   );
